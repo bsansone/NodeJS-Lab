@@ -1,0 +1,20 @@
+extend layout
+
+block content
+  h1 Movie Details
+  p Here are details about your movie
+  a.btn.btn-primary.btn-sm(href="/movies/") Back to List Page
+  p
+  table.table
+    thead
+      tr
+        th Title
+        th Genre
+        th Year
+        th Rating
+    tbody
+          tr
+            td #{movie.title}
+            td #{movie.genre}
+            td #{movie.year}
+            td #{movie.rating}

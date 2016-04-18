@@ -1,0 +1,21 @@
+extend layout
+
+block content
+  h1 Your Movies
+  p Here is a list of your movies
+  p To view details about a movie, click on it
+  a.btn.btn-primary.btn-sm(href="/") Back to Main Page
+  p
+  table.table
+    thead
+      tr
+        th Title
+    tbody
+      if !movies.length
+        tr
+          td(colspan=4) You should add a movie
+      else
+        each movie in movies
+          tr
+            td
+              a(href="/movies/#{movie.id}") #{movie.title}
